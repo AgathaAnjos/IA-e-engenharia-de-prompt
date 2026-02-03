@@ -1,0 +1,129 @@
+inteligência artificial => machine learning => deep learning
+
+    IA => qualquer técnica que permite o computador a imitar a inteligência humana, usando a lógica, regras matemáticas, árvores de decisão e ML (incluindo deep learning)
+    ML => subconjunto de IA que inclui técnicas estatísticas que permitem máquinas de melhorar tarefas através da experiência (incluindo deep learning)
+    DP => subconjunto de ML composta por algoritmos que permitem o software treinar a si mesmo para desempenhar tarefas, como reconhecimento de imagem e voz, por meio de múltiplas camadas de redes neurais artificiais
+    rede de Deep Learning faz extração de features de forma automática, enquanto uma rede neural shallow não tem essa capacidade.
+
+        imagem de entrada => processo/ dados gerados => dados interpretados na saída
+
+    visão computacional:
+        sensoriamento: imagens + processamento de imagens + análise: machine learning
+            reconhecimento de pessoas
+            rastreamento de obstáculos
+            detecção em imagens para detecção de objetos => detecção + rastreamneto em função do tempo
+
+                rede Yolo sort para rastreamento de objetos
+                    detecção, arquitetura, análise temporal
+
+    redes adversárias:
+        o sistema de imitação que aplica os conhecimentos que tem para produzir milhares de novas imagens no estilo desejado usando características, enquanto outro sistema de IA
+        avalia a semelhança entre as criações e o estilo original e gera uma classificação. Os resultados não convincentes são retornados ao sistema de imitação para serem aprimorados.
+        após trocar informações milhares de vezes, o sistema de imitação fica cada vez melhor.
+        as GAN's vão além da simples memorização do que já foi feito, elas criam um conteúdo novo. 
+        já existe estudo que exploram o potencial desses sistemas para gerar modelos 3D de carros e edifícios com base no esudo de fotos em 2D.
+        
+
+Inferência:
+    processo de raciocínio no qual se chega a uma conclusão, ou seja, a um conhwcimento desconhecido, a partir de premissas ou observações que são consideradas verdadeiras.
+
+
+Deep learning:
+    aprendizado profundo, rede neural articial baseado em neurôneus do cerébro humano
+    subconjunto avançado do ML baseado em redes neurais artificiais com múltiplas camadas, projetada para simular o funcionamento do cerébro humano.
+    processa grandes volumes de dados para identificar padrões automaticamente, sem intervenção humana direta, sendo ideal para tarefascomplexas como reconhecimento de voz, visão computacional e linguagem natural.
+
+        Principais Características e Funcionamento
+            Estrutura em Camadas (Profundidade) => utiliza redes neurais profundas com várias camadas interconectadas, onde cada uma realiza operações matemáticas para extrair características dos dados.
+            
+            Aprendizado Automático: Os modelos aprendem características de forma hierárquica a partir de dados brutos, dispensando a necessidade de engenharia manual de atributos.
+            
+            Dados Massivos: A eficácia do Deep Learning aumenta proporcionalmente ao volume de dados disponíveis para treinamento. 
+
+
+LLM's (grandes modelos de linguagem):
+
+    sistemas avançados de IA de treinamento com volumes massivos de dados textuais para compreender, processar e gerar linguagem natural semelhante a humana. 
+    Baseados em deep learning, utlizá-se arquiteturas como transformers (arquitetura de rede neural projetada para processar dados sequenciais (como texto, fala ou séries temporais) 
+    com alta eficiência e compreensão de contexto) para prever a próxima palavra, permitindo tarefas como tradução, resumo, criação de conteúdo e chatboots.
+    os LLm's melhoram quanto mais avançado seu treinanmento seja, quanto mais parametros melhor será a resposta da IA
+    a maioria dos LLM's precisam de uma API própria 
+
+        Principais Características e Funcionamento:
+            capacidade de generalização => habilidade do modelo de entender e responder coisas que nunca viu antes, de um jeito que faça sentido do jeito que aprendeu
+            sendo em um novo idioma, código de programação, etc.
+
+            escalabilidade => atender milhões de usuários simultâneamente sem perder a qualidade
+
+            Treinamento em Escala => São treinados em conjuntos de dados gigantescos (livros, artigos, internet) para aprender padrões linguísticos, nuances e contextos complexos.
+            
+            Aprendizado de Máquina => Utilizam redes neurais profundas com bilhões de parâmetros para processar informações.
+            
+            Generativos => Têm a capacidade de criar novos conteúdos, não apenas classificar dados.
+            
+            Contexto => Analisam palavras em um contexto amplo, melhorando a precisão da resposta
+
+
+Engenharia de Prompts:
+    técnicas de engenharia de prompt e parâmetros de inferência são as configurações que influênciam a maneira como o modelo gera previções e respostas
+
+        técnicas de engenharia de prompt:
+            prompt => conjunto de informções fornecidas para um modelo de IA, que gera uma resposta, solução e/ ou ação de acordo com as informações,
+            sem os prompts, as máquinas não saberiam o que responder, por isso é de extrema importância.
+
+            componentes de um prompt:
+                instruções => orientam o modelo sobre a tarefa a ser realizada, especificando o que fazer, como "resuma o texto abaixo em 3 frases objetivas"
+                exemplos (few-shot learning) => apresentam pares de entrada e saída esperadas, mostrando ao modelo o comportamento/ formato ideal para a tarefa definida
+                contexto/ configuração => define o papel do modelo e o cenário, como "você é um assistente de IA que simplifica explicaações teóricas para iciantes em tecnologia"
+                restrições/ limitações => limitam a resposta em termos de extensão ou escopo, como "responda em até 50 palavras, sem incluir opniões ou dados fictícios"
+                conteúdo principal => texto central para processamento, como um paragráfo, tabela ou documento, que o modelo deve analisar, traduzir ou resumir
+                indicações => guiam o modelo para gerar saídas específicas, usando estimulos como "liste pontos principais" ou "responda como um paragráfo único"
+                formato de saída => especifica a forma da resposta como "aprente no formato JSON" ou "liste os resultados como uma sequência de tópicos claros"
+                conteúdo de suporte => dados extras que ajudam a tarefa, como datas ou preferências, por exemplo "usde o contexto atual de dezembro de 2024 nas respostas"
+
+            técnicas de engenharia de prompt:
+                instruções claras => técnica que organiza o prompt para que as orientações sejam objetivas, detalhadas e colocadas no início para maior clareza
+                preparar a saída =>  define palavras ou frases no final do prompt que ajudam a moldar o formato da resposta, tornando-se mais estruturada e claras
+                solicitação de cadeia de pensamento => instrução para que o modelo responda passo a passo, explorando o raciocínio até chegar a conclusão final
+                especificar Estrutura de saída => indica o formato exato da resposta,  como JSON ou listas, ajudando a obter resultados organizados e úteis
+                repetir instruções no final => reforça as orientações no final do promptpara garantir que o modelo compreenda e siga a tarefa proposta sem desvios
+                dividir a tarefa => quebra uma tarefa complexa em várias etapas menores, facilitando para o modelo responder de forma lógica e organizada
+                adicionar sintaxe clara => organiza o prompt com formatações como listas, títulos ou tabelas, tornando as instruções mais vasuais e compreensíveis
+                guardrails => técnicos para limitar respostas, evitando conteúdos prejudiciais, irrelevantes ou incorretos, alinhando o modelo a padrões éticos
+
+    modelos de linguagem influênciam as respostas, por isso, para ter um bom prompt existem elementos essenciais:
+        introdução inicial => contexto adequado => exemplos => dados de entrada => formato de saída
+
+            exemplo:
+                crie uma história inicial para uma campanha de rpg de fantasia, envolvendo um grupo de aventureiros presos em uma cidade amaldiçoada. => introdução inicial
+
+                a cidade foi tomada por uma maldição que impede qualquer um de sair. os moradores estão desaparecendo misteriosamente, e as sombras parecem ganhar vida.
+                os jogadores são aventureiros que chegaram a cidade pouco antes da maldição começar, em busca de tesouros escondidos. => contexto adequado
+
+                por exemplo, a história pode começarcom os aventureiros sendo atacados por sombras vivas na entrada da cidade, forçando-os a buscar refúgio na taberna local.
+                lá, eles encontraram um velho contador de histórias que fala sobre uma relíquia perdida que pode quebrar a maldição. => exemplos
+
+                os aventureiros incluem: um ladino sarcástico, um clérigo com uma conexão msiteriosa com as sombras, um bárbaro impulsivo e um mago que busca conhecimento proibido.
+                o vilão principal é uma figura encapusada que manipula a maldição das sombras. => dados de entrada
+
+                a história deve ter de 2 á 3 paragráfos, começando com uma inttrodução impactante, seguida pelo primeiro desafio e um gancho final que motive os jogadores a 
+                explorar a cidade. => formato de saída
+
+    cuidados na aplicação de prompts:
+        prompts devem ser analisados, tendo atenção com esses aspectos:
+            prompts enviesados, alucinações, considerações éticas, confiabilidade, privacidade e segurança, imparcialidade, inclusão, transparência e responsabilidade.
+
+    tipos de IA:
+        chat bots => chatGPT, Bing, Bard
+        geração de imagens => Bing, Leonard AI, Midjourney
+        voz e avatares virtuais => ElevenLabs, D-ID, HeyGen
+        estudos, apresentações e resumos => NotebookLM,  GAMMA IA
+
+    IA na indústria:
+        robótica e automoção inteligente => produção de veículos autônomos e robôs para a indústria
+        saúde e finanças => torna diagnósticos mais precisos, tornando análises mais eficazes e previsões de investimentos
+        marketing => identifica os usuários ideais para campanhas e personalizar a UX, analizando seu comportamento e histórico nas mídeas sociais
+   
+
+
+
